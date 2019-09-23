@@ -13,7 +13,7 @@ pipeline {
          stage('check python and ansible version') {
              steps {
                  sh """
-                 echo $ds.dbname
+                 echo ${ds.dbname}	
                  ls -altr
                  ansible --version
                  docker info
